@@ -1,13 +1,18 @@
-import HeaderTitle from './componets/landingPage/header';
-import MainBody from './componets/landingPage/main';
-import SocialMedia from './componets/landingPage/socialMedia';
+
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Home from './Home';
+import ChesseCalculator from './componets/cheeseCalculator/calculatorCheese';
 
 function App() {
   return (
+    
       <div>
-        <HeaderTitle/>
-        <MainBody/>
-        <SocialMedia/>        
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/calculator' element={<ChesseCalculator/>}/>
+          </Routes>
+        </BrowserRouter>       
       </div>   
   );
 }
